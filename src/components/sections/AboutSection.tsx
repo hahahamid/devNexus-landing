@@ -142,8 +142,8 @@ const AboutSection = () => {
               </div>
               
               {/* Decorative elements */}
-              <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-dark-bg border border-purple/40 rounded-lg rotate-12"></div>
-              <div className="absolute -top-4 -left-4 w-16 h-16 bg-dark-bg border border-purple/40 rounded-lg -rotate-6"></div>
+              {/* <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-dark-bg border border-purple/40 rounded-lg rotate-12"></div> */}
+              {/* <div className="absolute -top-10 -left-4 w-16 h-16 bg-dark-bg border border-purple/40 rounded-lg -rotate-12 "></div> */}
             </div>
           </div>
         </div>

@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 
@@ -10,10 +9,10 @@ const ContactSection = () => {
     subject: "",
     message: "",
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -21,11 +20,11 @@ const ContactSection = () => {
       [name]: value,
     }));
   };
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
@@ -37,7 +36,7 @@ const ContactSection = () => {
         subject: "",
         message: "",
       });
-      
+
       // Reset success message after 5 seconds
       setTimeout(() => {
         setSubmitted(false);
@@ -46,39 +45,46 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-dark-surface relative overflow-hidden">
+    <section
+      id="contact"
+      className="section-padding bg-dark-surface relative overflow-hidden"
+    >
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-      
+
       <div className="section-container relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
             Get In <span className="text-gradient">Touch</span>
           </h2>
           <p className="text-white/70 max-w-xl mx-auto">
-            Ready to discuss your project? Contact us today and let's build something amazing together.
+            Ready to discuss your project? Contact us today and let's build
+            something amazing together.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
           <div className="lg:col-span-2 space-y-6">
             <div className="bg-dark-bg glass-card rounded-xl p-8 border border-dark-border animate-fade-in">
               <h3 className="text-xl font-heading font-semibold mb-6">
                 Contact Information
               </h3>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="shrink-0 w-10 h-10 rounded-full bg-purple/10 flex items-center justify-center mr-4">
                     <MapPin size={20} className="text-purple" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-white mb-1">Our Location</h4>
+                    <h4 className="font-medium text-white mb-1">
+                      Our Location
+                    </h4>
                     <p className="text-white/60">
-                      123 Innovation Drive, Tech Hub, CA 91234
+                      87, 1st Floor, Mahatma Gandhi Rd, Bengaluru, Karnataka
+                      560001
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="shrink-0 w-10 h-10 rounded-full bg-purple/10 flex items-center justify-center mr-4">
                     <Mail size={20} className="text-purple" />
@@ -89,37 +95,35 @@ const ContactSection = () => {
                     <p className="text-white/60">support@devnexus.com</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="shrink-0 w-10 h-10 rounded-full bg-purple/10 flex items-center justify-center mr-4">
                     <Phone size={20} className="text-purple" />
                   </div>
                   <div>
                     <h4 className="font-medium text-white mb-1">Call Us</h4>
-                    <p className="text-white/60">+1 (555) 123-4567</p>
-                    <p className="text-white/60">+1 (555) 987-6543</p>
+                    <p className="text-white/60">+91-855-593-4256</p>
+                    <p className="text-white/60">+91-855-593-4257</p>
                   </div>
                 </div>
               </div>
-              
-              <div className="mt-8">
+
+              <div className="mt-8 pb-20">
                 <h4 className="font-medium text-white mb-4">Working Hours</h4>
                 <p className="text-white/60 mb-1">
                   Monday - Friday: 9:00 AM - 6:00 PM
                 </p>
-                <p className="text-white/60">
-                  Saturday - Sunday: Closed
-                </p>
+                <p className="text-white/60">Saturday - Sunday: Closed</p>
               </div>
             </div>
           </div>
-          
+
           <div className="lg:col-span-3">
             <div className="bg-dark-bg glass-card rounded-xl p-8 border border-dark-border h-full animate-fade-in-slow">
               <h3 className="text-xl font-heading font-semibold mb-6">
                 Send Us a Message
               </h3>
-              
+
               {submitted ? (
                 <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-4 text-center animate-fade-in">
                   <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -136,7 +140,10 @@ const ContactSection = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-white/80 mb-2 text-sm" htmlFor="name">
+                      <label
+                        className="block text-white/80 mb-2 text-sm"
+                        htmlFor="name"
+                      >
                         Your Name
                       </label>
                       <input
@@ -149,9 +156,12 @@ const ContactSection = () => {
                         required
                       />
                     </div>
-                    
+
                     <div>
-                      <label className="block text-white/80 mb-2 text-sm" htmlFor="email">
+                      <label
+                        className="block text-white/80 mb-2 text-sm"
+                        htmlFor="email"
+                      >
                         Email Address
                       </label>
                       <input
@@ -165,10 +175,13 @@ const ContactSection = () => {
                       />
                     </div>
                   </div>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-white/80 mb-2 text-sm" htmlFor="phone">
+                      <label
+                        className="block text-white/80 mb-2 text-sm"
+                        htmlFor="phone"
+                      >
                         Phone Number (Optional)
                       </label>
                       <input
@@ -180,9 +193,12 @@ const ContactSection = () => {
                         className="w-full px-4 py-3 rounded-lg bg-dark-surface border border-dark-border text-white focus:border-purple focus:outline-none focus:ring-1 focus:ring-purple/50 transition-colors"
                       />
                     </div>
-                    
+
                     <div>
-                      <label className="block text-white/80 mb-2 text-sm" htmlFor="subject">
+                      <label
+                        className="block text-white/80 mb-2 text-sm"
+                        htmlFor="subject"
+                      >
                         Subject
                       </label>
                       <input
@@ -196,9 +212,12 @@ const ContactSection = () => {
                       />
                     </div>
                   </div>
-                  
+
                   <div>
-                    <label className="block text-white/80 mb-2 text-sm" htmlFor="message">
+                    <label
+                      className="block text-white/80 mb-2 text-sm"
+                      htmlFor="message"
+                    >
                       Your Message
                     </label>
                     <textarea
@@ -211,7 +230,7 @@ const ContactSection = () => {
                       required
                     />
                   </div>
-                  
+
                   <button
                     type="submit"
                     disabled={isSubmitting}

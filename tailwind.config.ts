@@ -164,6 +164,10 @@ export default {
 				'sans': ['Inter', 'sans-serif'],
 				'heading': ['Poppins', 'sans-serif'],
 				'code': ['Fira Code', 'monospace'],
+				'futura': ['Futura', 'sans-serif'], 
+				'poppins': ['Poppins', 'sans-serif'],
+
+
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(circle, var(--tw-gradient-stops))',

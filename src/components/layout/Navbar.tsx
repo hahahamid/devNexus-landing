@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -22,26 +21,29 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed font-futura tracking-wider top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "py-3 bg-dark-bg/90 backdrop-blur-md shadow-md"
           : "py-5 bg-transparent"
       }`}
     >
       <div className="section-container flex items-center justify-between">
-        <Link
-          to="/"
-          className="text-2xl font-heading font-bold text-gradient"
-        >
+        <Link to="/" className="text-2xl font-heading font-bold text-gradient">
           DevNexus
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <NavLinks />
-          <button className="btn-primary animate-fade-in-fast">
-            Get Started
-          </button>
+          <a
+            href="https://calendly.com/hahahamid/30min?preview_source=et_card"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="btn-primary animate-fade-in-fast font-poppins font-semibold">
+              Get Started
+            </button>
+          </a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -67,11 +69,11 @@ const Navbar = () => {
   );
 };
 
-const NavLinks = ({ 
-  mobile = false, 
-  setIsMenuOpen = (_value: boolean) => {} 
-}: { 
-  mobile?: boolean; 
+const NavLinks = ({
+  mobile = false,
+  setIsMenuOpen = (_value: boolean) => {},
+}: {
+  mobile?: boolean;
   setIsMenuOpen?: (value: boolean) => void;
 }) => {
   const links = [

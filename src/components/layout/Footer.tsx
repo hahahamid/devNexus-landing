@@ -1,7 +1,15 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Instagram, Twitter, Linkedin, Facebook, Github } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Instagram,
+  Twitter,
+  Linkedin,
+  Facebook,
+  Github,
+} from "lucide-react";
 
 const Footer = () => {
   return (
@@ -9,11 +17,15 @@ const Footer = () => {
       <div className="section-container py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <Link to="/" className="text-2xl font-heading font-bold text-gradient inline-block">
+            <Link
+              to="/"
+              className="text-2xl font-heading font-bold text-gradient inline-block"
+            >
               DevNexus
             </Link>
             <p className="text-white/70 max-w-xs">
-              Transforming ideas into powerful digital solutions for businesses of all sizes.
+              Transforming ideas into powerful digital solutions for businesses
+              of all sizes.
             </p>
             <div className="flex space-x-4">
               <SocialIcon icon={<Twitter size={18} />} />
@@ -52,12 +64,12 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin size={18} className="text-purple-light mt-1 mr-3" />
                 <span className="text-white/70">
-                  123 Innovation Drive, Tech Hub, CA 91234
+                  87, 1st Floor, Mahatma Gandhi Rd, Bengaluru, Karnataka 560001
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone size={18} className="text-purple-light mr-3" />
-                <span className="text-white/70">+1 (555) 123-4567</span>
+                <span className="text-white/70">+91-855-593-4256</span>
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="text-purple-light mr-3" />
@@ -99,7 +111,13 @@ const SocialIcon = ({ icon }: { icon: React.ReactNode }) => {
   );
 };
 
-const FooterLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
+const FooterLink = ({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) => {
   return (
     <li>
       <a
